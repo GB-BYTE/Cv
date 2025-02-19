@@ -1,0 +1,21 @@
+﻿@using Cv_webapp.Models
+@model ExperienceModel;
+@{
+    ViewData["Title"] = "Experience";
+
+    var MyBio = Model;
+}
+
+<div class="main-container  d-flex">
+    <card class="sub-container mx-auto justify-content-center pt-2" style="background-color:darkgray;">
+        <h3 class="text-center">Work Experience</h3>
+        <div class="align-items-center p-3" style="font-size:18px">
+            <span style="font-size:14px">@MyBio.position</span>
+            <h4>@MyBio.Company</h4>
+            <p>@MyBio.Description</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3 text-center mx-auto" style="background-color:black; max-width:120px; padding:6px">
+            <a class="btn" asp-controller="Main" asp-action="Skills" style="color:white">Know more</a>
+        </div>
+    </card>
+</div>

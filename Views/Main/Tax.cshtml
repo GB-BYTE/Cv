@@ -1,0 +1,22 @@
+﻿@model TaxModel 
+@{
+    ViewData["Title"] = "Tax";
+}
+
+
+<div class="main-container  d-flex p-3">
+    <card class="sub-container mx-auto justify-content-center pt-2" style="background-color:darkgray;">
+        <h5 class="text-center mt-4">Tax Calculation Result</h5>
+        <div class="align-items-center p-3" style="font-size:18px">
+            <p>Annual Income: ₦@Model.Amount</p>
+            <p>Tax Payable: ₦@Model.TaxAmount</p>
+            
+        </div>
+        @* <div class="p-3 mb-3 text-center align-items-center" style="background-color:black;">
+            <a asp-controller="Main" asp-action="Skills">Know more</a>
+        </div> *@
+    </card>
+</div>
+
+
+

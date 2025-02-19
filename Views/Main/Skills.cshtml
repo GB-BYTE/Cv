@@ -1,0 +1,24 @@
+﻿@using Cv_webapp.Models
+@model IEnumerable<Skills>
+@{
+    ViewData["Title"] = "Skills";
+}
+
+<div class="main-container  d-flex">
+    <card class="sub-container mx-auto justify-content-center pt-2" style="background-color:darkgray;">
+        <h3 class="text-center">SkillSet</h3>
+        <div class="align-items-center p-3" style="font-size:18px">
+            <h5>Languages / Frameworks</h5>
+           @if(Model!=null){
+              foreach(var skill in Model){
+                  <p>@skill.TechnicalSkills</p>
+              }
+           }else{
+               <p>There are no Skills yet</p>
+           }
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3 text-center mx-auto" style="background-color:black; max-width:120px; padding:6px">
+            <a  class="btn" asp-controller="Main" asp-action="Tax" style="color:white">Tax Amount</a>
+        </div>
+    </card>
+</div>
