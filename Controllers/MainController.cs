@@ -21,7 +21,7 @@ namespace Cv_webapp.Controllers
             }
             else
             {
-                var reult = "it is null";
+                var reult = "it is";
                 return View(reult);
             }
         }
